@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { MDXProvider } from '@mdx-js/tag'
 import { Provider as RebassProvider } from 'rebass'
-import createComponents from '@rebass/markdown'
 import styled from 'styled-components'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 
@@ -36,6 +35,11 @@ export default class App extends Component {
                 {['array', 'function', 'object'].map(x => (
                   <SidebarItem key={x}>
                     <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
+                    {['fill', 'every', 'concat'].map(x => (
+                      <a key={x} href={`#${x}`}>
+                        {x}
+                      </a>
+                    ))}
                   </SidebarItem>
                 ))}
               </Sidebar>
