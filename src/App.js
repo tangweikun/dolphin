@@ -21,6 +21,12 @@ class Foo extends React.Component {
   }
 }
 
+const foo = {
+  array: ['concat', 'every', 'fill'],
+  function: ['apply'],
+  object: ['deepFreeze'],
+}
+
 export default class App extends Component {
   render() {
     return (
@@ -33,14 +39,22 @@ export default class App extends Component {
               </Nav>
               <Sidebar>
                 {['array', 'function', 'object'].map(x => (
-                  <SidebarItem key={x}>
-                    <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
-                    {['fill', 'every', 'concat'].map(x => (
-                      <a key={x} href={`#${x}`}>
-                        {x}
-                      </a>
+                  <React.Fragment>
+                    <SidebarItem key={x}>
+                      <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
+                    </SidebarItem>
+                    {foo[x].map(item => (
+                      <SubSidebarItem key={item}>
+                        <a
+                          style={{ color: '#697482', textDecoration: 'none' }}
+                          key={item}
+                          href={`/docs/${x}#${item}`}
+                        >
+                          {item}
+                        </a>
+                      </SubSidebarItem>
                     ))}
-                  </SidebarItem>
+                  </React.Fragment>
                 ))}
               </Sidebar>
 
@@ -51,9 +65,7 @@ export default class App extends Component {
                   path="/docs/array"
                   component={() => (
                     <Content>
-                      {/* <Container> */}
                       <ArrayMD />
-                      {/* </Container> */}
                     </Content>
                   )}
                 />
@@ -129,4 +141,9 @@ const Content = styled.div`
 
 const SidebarItem = styled.div`
   height: 48px;
+`
+
+const SubSidebarItem = styled.div`
+  height: 42px;
+  margin-left: 20px;
 `
