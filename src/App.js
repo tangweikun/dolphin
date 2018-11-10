@@ -8,6 +8,7 @@ import ArrayMD from './docs/array.md'
 import FunctionMD from './docs/function.md'
 import ObjectMD from './docs/object.md'
 import MdxComponents from './mdx-components'
+import SidebarMenu from './SidebarMenus'
 
 class Foo extends React.Component {
   render() {
@@ -37,26 +38,7 @@ export default class App extends Component {
               <Nav>
                 <StyledLink to="/">Home</StyledLink>
               </Nav>
-              <Sidebar>
-                {['array', 'function', 'object'].map(x => (
-                  <React.Fragment>
-                    <SidebarItem key={x}>
-                      <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
-                    </SidebarItem>
-                    {foo[x].map(item => (
-                      <SubSidebarItem key={item}>
-                        <a
-                          style={{ color: '#697482', textDecoration: 'none' }}
-                          key={item}
-                          href={`/docs/${x}#${item}`}
-                        >
-                          {item}
-                        </a>
-                      </SubSidebarItem>
-                    ))}
-                  </React.Fragment>
-                ))}
-              </Sidebar>
+              <SidebarMenu />
 
               <Switch>
                 <Route path="/" exact component={Foo} />
