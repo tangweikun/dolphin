@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { MDXProvider } from '@mdx-js/tag'
-import { Container, Provider as RebassProvider } from 'rebass'
+import { Provider as RebassProvider } from 'rebass'
 import createComponents from '@rebass/markdown'
 import styled from 'styled-components'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import ArrayMD from './docs/array.md'
 import FunctionMD from './docs/function.md'
 import ObjectMD from './docs/object.md'
+import MdxComponents from './mdx-components'
 
 class Foo extends React.Component {
   render() {
@@ -15,11 +16,7 @@ class Foo extends React.Component {
 
     return (
       <React.Fragment>
-        <Content>
-          {[0, 1, 2].map(x => (
-            <div key={x}>{category}</div>
-          ))}
-        </Content>
+        <Content>HomeTODO:</Content>
       </React.Fragment>
     )
   }
@@ -29,10 +26,12 @@ export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <MDXProvider components={createComponents()}>
+        <MDXProvider components={MdxComponents}>
           <RebassProvider>
-            <Container>
-              <Nav>Home</Nav>
+            <React.Fragment>
+              <Nav>
+                <StyledLink to="/">Home</StyledLink>
+              </Nav>
               <Sidebar>
                 {['array', 'function', 'object'].map(x => (
                   <SidebarItem key={x}>
@@ -48,7 +47,9 @@ export default class App extends Component {
                   path="/docs/array"
                   component={() => (
                     <Content>
+                      {/* <Container> */}
                       <ArrayMD />
+                      {/* </Container> */}
                     </Content>
                   )}
                 />
@@ -69,7 +70,7 @@ export default class App extends Component {
                   )}
                 />
               </Switch>
-            </Container>
+            </React.Fragment>
           </RebassProvider>
         </MDXProvider>
       </BrowserRouter>
@@ -79,10 +80,16 @@ export default class App extends Component {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #fff;
+  color: #556272;
   display: inline-block;
-  padding-right: 20px;
+  padding: 4px 8px;
   font-size: 20px;
+  text-transform: capitalize;
+  border-radius: 4px;
+
+  :hover {
+    background: rgba(20, 20, 20, 0.1);
+  }
 `
 
 const Nav = styled.div`
@@ -108,63 +115,12 @@ const Sidebar = styled.div`
   padding: 10px 0 0 40px;
 `
 
+// TODO: max-width需要修改
 const Content = styled.div`
   width: 100%;
-  padding-left: 300px;
+  padding-left: 340px;
   padding-top: 40px;
-  margin: 0 auto;
-`
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const Name = styled.div`
-  color: #77e756;
-  font-size: 30px;
-`
-
-const Values = styled.div`
-  color: #fff;
-  font-size: 22px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 14px;
-`
-
-const Value = styled.span`
-  &:not(:first-child) {
-    margin-left: 4px;
-  }
-  &:not(:last-child)::after {
-    content: ' | ';
-  }
-`
-
-const BlockWrapper = styled.div`
-  background: ${props => props.bg};
-  padding: 10px;
-  min-width: 340px;
-  color: #fff;
-  font-size: 20px;
-
-  height: 100px;
-  border-radius: 4px;
-  margin: 20px;
-  box-shadow: 0 1px 2px 0 rgba(168, 182, 191, 0.6);
-  transition: all 0.25s ease-out;
-
-  &:hover {
-    box-shadow: 0 10px 20px 0 rgba(168, 182, 191, 0.6);
-    transform: translateY(-1px);
-  }
-`
-
-const Title = styled.h1`
-  color: rgb(243, 182, 97);
-  font-weight: bold;
-  text-transform: capitalize;
+  max-width: 1024px;
 `
 
 const SidebarItem = styled.div`
