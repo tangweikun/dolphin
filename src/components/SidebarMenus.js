@@ -9,12 +9,14 @@ const foo = {
   object: ['deepFreeze'],
 }
 
+const bar = Object.keys(foo)
+
 class SidebarMenu extends Component {
   render() {
     const pathname = get(this.props.location, 'pathname')
     return (
       <Sidebar>
-        {['array', 'function', 'object'].map(x => (
+        {bar.map(x => (
           <React.Fragment key={x}>
             <SidebarItem>
               <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
