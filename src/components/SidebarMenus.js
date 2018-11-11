@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Link, withRouter } from 'react-router-dom'
 import get from 'lodash/get'
 
@@ -11,7 +11,6 @@ const foo = {
 
 class SidebarMenu extends Component {
   render() {
-    const hash = get(this.props.location, 'hash')
     const pathname = get(this.props.location, 'pathname')
     return (
       <Sidebar>
@@ -64,18 +63,6 @@ const StyledA = styled.a`
   }
 `
 
-const Nav = styled.div`
-  top: 0;
-  left: 0;
-  height: 56px;
-  line-height: 56px;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  background: #ce7693;
-  padding: 0 40px;
-`
-
 const Sidebar = styled.div`
   position: fixed;
   left: 0;
@@ -85,14 +72,6 @@ const Sidebar = styled.div`
   background: rgb(239, 239, 239);
   font-size: 22px;
   padding: 10px 0 0 40px;
-`
-
-// TODO: max-width需要修改
-const Content = styled.div`
-  width: 100%;
-  padding-left: 340px;
-  padding-top: 40px;
-  max-width: 1024px;
 `
 
 const SidebarItem = styled.div`

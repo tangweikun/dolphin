@@ -5,5 +5,7 @@
 - [ ] 移动端适配
 - [ ] 支持多语言
 - [ ] About Me
+- [ ] Use rem instead of px
 - [ ] 友情链接
+- [ ] SVG
 - [ ] https://www.docz.site/documentation/components-api#docpreview
