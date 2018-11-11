@@ -20,7 +20,7 @@ export default class App extends Component {
           <RebassProvider>
             <React.Fragment>
               <Nav>
-                <NavStyledLink to="/">Home</NavStyledLink>
+                <NavStyledLink to="/">Polyfill</NavStyledLink>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <a
                     style={{

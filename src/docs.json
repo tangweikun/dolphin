@@ -80,7 +80,22 @@
       "pathname": "object",
       "sections": [
         {
-          "anchor": "deepFreeze"
+          "anchor": "assign"
+        },
+        {
+          "anchor": "create"
+        },
+        {
+          "anchor": "defineProperties"
+        },
+        {
+          "anchor": "entries"
+        },
+        {
+          "anchor": "is"
+        },
+        {
+          "anchor": "keys"
         }
       ]
     }
