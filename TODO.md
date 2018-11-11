@@ -9,5 +9,6 @@
 - [ ] 友情链接
 - [ ] SVG
 - [ ] MDN Link
+- [ ] polyfill && lodash
 - [ ] Syntax
 - [ ] https://www.docz.site/documentation/components-api#docpreview

@@ -11,6 +11,54 @@
         },
         {
           "anchor": "fill"
+        },
+        {
+          "anchor": "filter"
+        },
+        {
+          "anchor": "find"
+        },
+        {
+          "anchor": "findIndex"
+        },
+        {
+          "anchor": "forEach"
+        },
+        {
+          "anchor": "includes"
+        },
+        {
+          "anchor": "indexOf"
+        },
+        {
+          "anchor": "isArray"
+        },
+        {
+          "anchor": "join"
+        },
+        {
+          "anchor": "lastIndexOf"
+        },
+        {
+          "anchor": "map"
+        },
+        {
+          "anchor": "of"
+        },
+        {
+          "anchor": "reduce"
+        },
+        {
+          "anchor": "reverse"
+        },
+        {
+          "anchor": "slice"
+        },
+        {
+          "anchor": "some"
+        },
+        {
+          "anchor": "toLocalString"
         }
       ]
     },
