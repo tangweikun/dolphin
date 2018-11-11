@@ -66,7 +66,8 @@ const Sidebar = styled.div`
   width: 300px;
   background: rgb(239, 239, 239);
   font-size: 22px;
-  padding: 10px 0 0 40px;
+  padding: 10px 0 40px 40px;
+  overflow: auto;
 `
 
 const SidebarItem = styled.div`
