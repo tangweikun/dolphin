@@ -1,4 +1,4 @@
-import DeepFreeze from '../sections/object/deepFreeze.md'
+import DeepFreeze from './sections/object/deepFreeze.md'
 
 # Object
 

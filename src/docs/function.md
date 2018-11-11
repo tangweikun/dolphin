@@ -1,4 +1,4 @@
-import Apply from '../sections/function/apply.md'
+import Apply from './sections/function/apply.md'
 
 # Function
 
