@@ -1,3 +1,5 @@
-- [ ] 点击链接跳转位置问题
+- [x] 点击链接跳转位置问题 https://stackoverflow.com/questions/23581161/how-to-control-the-anchor-landing-position
 - [ ] 支持 Theme 切换
+- [ ] 添加 Github 入口
+- [ ] 添加搜索功能
 - [ ] https://www.docz.site/documentation/components-api#docpreview

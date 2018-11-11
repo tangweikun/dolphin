@@ -12,8 +12,6 @@ import SidebarMenu from './SidebarMenus'
 
 class Foo extends React.Component {
   render() {
-    const category = this.props.match.params.section
-
     return (
       <React.Fragment>
         <Content>HomeTODO:</Content>
@@ -36,7 +34,7 @@ export default class App extends Component {
           <RebassProvider>
             <React.Fragment>
               <Nav>
-                <StyledLink to="/">Home</StyledLink>
+                <NavStyledLink to="/">Home</NavStyledLink>
               </Nav>
               <SidebarMenu />
 
@@ -90,6 +88,14 @@ const StyledLink = styled(Link)`
   }
 `
 
+const NavStyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 20px;
+`
+
 const Nav = styled.div`
   top: 0;
   left: 0;
@@ -117,7 +123,7 @@ const Sidebar = styled.div`
 const Content = styled.div`
   width: 100%;
   padding-left: 340px;
-  padding-top: 40px;
+  padding-top: 56px;
   max-width: 1024px;
 `
 

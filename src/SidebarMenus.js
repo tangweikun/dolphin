@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link, withRouter } from 'react-router-dom'
 import get from 'lodash/get'
 
@@ -23,13 +23,9 @@ class SidebarMenu extends Component {
             {`/docs/${x}` === pathname &&
               foo[x].map(item => (
                 <SubSidebarItem key={item}>
-                  <a
-                    style={{ color: '#697482', textDecoration: 'none' }}
-                    key={item}
-                    href={`/docs/${x}#${item}`}
-                  >
+                  <StyledA key={item} href={`/docs/${x}#${item}`}>
                     {item}
-                  </a>
+                  </StyledA>
                 </SubSidebarItem>
               ))}
           </React.Fragment>
@@ -45,9 +41,22 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: #556272;
   display: inline-block;
-  padding: 4px 8px;
+  padding: 0 8px;
   font-size: 20px;
   text-transform: capitalize;
+  border-radius: 4px;
+
+  :hover {
+    background: rgba(20, 20, 20, 0.1);
+  }
+`
+
+const StyledA = styled.a`
+  text-decoration: none;
+  color: #556272;
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 20px;
   border-radius: 4px;
 
   :hover {
@@ -88,9 +97,11 @@ const Content = styled.div`
 
 const SidebarItem = styled.div`
   height: 48px;
+  line-height: 48px;
 `
 
 const SubSidebarItem = styled.div`
-  height: 42px;
-  margin-left: 20px;
+  height: 36px;
+  line-height: 36px;
+  margin-left: 16px;
 `
