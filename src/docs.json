@@ -19,6 +19,12 @@
       "sections": [
         {
           "anchor": "apply"
+        },
+        {
+          "anchor": "bind"
+        },
+        {
+          "anchor": "call"
         }
       ]
     },

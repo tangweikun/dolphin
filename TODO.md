@@ -8,4 +8,6 @@
 - [ ] Use rem instead of px
 - [ ] 友情链接
 - [ ] SVG
+- [ ] MDN Link
+- [ ] Syntax
 - [ ] https://www.docz.site/documentation/components-api#docpreview
