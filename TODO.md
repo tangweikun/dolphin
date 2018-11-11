@@ -2,4 +2,8 @@
 - [ ] 支持 Theme 切换
 - [ ] 添加 Github 入口
 - [ ] 添加搜索功能
+- [ ] 移动端适配
+- [ ] 支持多语言
+- [ ] About Me
+- [ ] 友情链接
 - [ ] https://www.docz.site/documentation/components-api#docpreview
