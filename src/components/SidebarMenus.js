@@ -2,30 +2,23 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link, withRouter } from 'react-router-dom'
 import get from 'lodash/get'
-
-const foo = {
-  array: ['concat', 'every', 'fill'],
-  function: ['apply'],
-  object: ['deepFreeze'],
-}
-
-const bar = Object.keys(foo)
+import { pages } from '../docs.json'
 
 class SidebarMenu extends Component {
   render() {
-    const pathname = get(this.props.location, 'pathname')
+    const currentPathname = get(this.props.location, 'pathname')
     return (
       <Sidebar>
-        {bar.map(x => (
-          <React.Fragment key={x}>
+        {pages.map(({ pathname, sections }) => (
+          <React.Fragment key={pathname}>
             <SidebarItem>
-              <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
+              <StyledLink to={`/docs/${pathname}`}>{pathname}</StyledLink>
             </SidebarItem>
-            {`/docs/${x}` === pathname &&
-              foo[x].map(item => (
-                <SubSidebarItem key={item}>
-                  <StyledA key={item} href={`/docs/${x}#${item}`}>
-                    {item}
+            {`/docs/${pathname}` === currentPathname &&
+              sections.map(({ anchor }) => (
+                <SubSidebarItem key={anchor}>
+                  <StyledA href={`/docs/${pathname}#${anchor}`}>
+                    {anchor}
                   </StyledA>
                 </SubSidebarItem>
               ))}

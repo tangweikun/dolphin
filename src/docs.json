@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "pathname": "array",
+      "sections": [
+        {
+          "anchor": "concat"
+        },
+        {
+          "anchor": "every"
+        },
+        {
+          "anchor": "fill"
+        }
+      ]
+    },
+    {
+      "pathname": "function",
+      "sections": [
+        {
+          "anchor": "apply"
+        }
+      ]
+    },
+    {
+      "pathname": "object",
+      "sections": [
+        {
+          "anchor": "deepFreeze"
+        }
+      ]
+    }
+  ]
+}

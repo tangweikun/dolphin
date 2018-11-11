@@ -1,14 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
-const foo = {
-  array: ['concat', 'every', 'fill'],
-  function: ['apply'],
-  object: ['deepFreeze'],
-}
-
-const bar = Object.keys(foo)
+import { pages } from '../docs.json'
 
 export class Home extends React.Component {
   render() {
@@ -21,14 +14,16 @@ export class Home extends React.Component {
           </p>
 
           <Foo>
-            {bar.map(x => (
-              <Bar key={x}>
+            {pages.map(({ sections, pathname }) => (
+              <Bar key={pathname}>
                 <StyledH2>
-                  <StyledLink to={`/docs/${x}`}>{x}</StyledLink>
+                  <StyledLink to={`/docs/${pathname}`}>{pathname}</StyledLink>
                 </StyledH2>
-                {foo[x].map(y => (
-                  <StyledH3 key={y}>
-                    <StyledA to={`/docs/${x}#${y}`}>{y}</StyledA>
+                {sections.map(({ anchor }) => (
+                  <StyledH3 key={anchor}>
+                    <StyledA to={`/docs/${pathname}#${anchor}`}>
+                      {anchor}
+                    </StyledA>
                   </StyledH3>
                 ))}
               </Bar>
