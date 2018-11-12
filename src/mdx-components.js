@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const MdxComponents = {
   code({ children }) {
     return (
-      <SyntaxHighlighter language="javascript" style={prism} showLineNumbers>
+      <SyntaxHighlighter language="javascript" style={prism}>
         {children}
       </SyntaxHighlighter>
     )

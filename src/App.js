@@ -11,63 +11,66 @@ import MdxComponents from './mdx-components'
 import SidebarMenu from './components/SidebarMenus'
 import { GithubIcon } from './fontIcon'
 import { Home } from './routes/home'
+import ScrollToTop from './ScrollToTop'
 
 export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <MDXProvider components={MdxComponents}>
-          <RebassProvider>
-            <React.Fragment>
-              <Nav>
-                <NavStyledLink to="/">Polyfill</NavStyledLink>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <a
-                    style={{
-                      display: 'flex',
-                      cursor: 'pointer',
-                      color: '#fff',
-                    }}
-                    href="https://github.com/tangweikun/dolphin"
-                    target="_blank"
-                  >
-                    <GithubIcon />
-                  </a>
-                </div>
-              </Nav>
-              <SidebarMenu />
+        <ScrollToTop>
+          <MDXProvider components={MdxComponents}>
+            <RebassProvider>
+              <React.Fragment>
+                <Nav>
+                  <NavStyledLink to="/">Polyfill</NavStyledLink>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <a
+                      style={{
+                        display: 'flex',
+                        cursor: 'pointer',
+                        color: '#fff',
+                      }}
+                      href="https://github.com/tangweikun/dolphin"
+                      target="_blank"
+                    >
+                      <GithubIcon />
+                    </a>
+                  </div>
+                </Nav>
+                <SidebarMenu />
 
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/docs" exact component={Home} />
-                <Route
-                  path="/docs/array"
-                  component={() => (
-                    <Content>
-                      <ArrayMD />
-                    </Content>
-                  )}
-                />
-                <Route
-                  path="/docs/function"
-                  component={() => (
-                    <Content>
-                      <FunctionMD />
-                    </Content>
-                  )}
-                />
-                <Route
-                  path="/docs/object"
-                  component={() => (
-                    <Content>
-                      <ObjectMD />
-                    </Content>
-                  )}
-                />
-              </Switch>
-            </React.Fragment>
-          </RebassProvider>
-        </MDXProvider>
+                <Switch>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/docs" exact component={Home} />
+                  <Route
+                    path="/docs/array"
+                    component={() => (
+                      <Content>
+                        <ArrayMD />
+                      </Content>
+                    )}
+                  />
+                  <Route
+                    path="/docs/function"
+                    component={() => (
+                      <Content>
+                        <FunctionMD />
+                      </Content>
+                    )}
+                  />
+                  <Route
+                    path="/docs/object"
+                    component={() => (
+                      <Content>
+                        <ObjectMD />
+                      </Content>
+                    )}
+                  />
+                </Switch>
+              </React.Fragment>
+            </RebassProvider>
+          </MDXProvider>
+        </ScrollToTop>
       </BrowserRouter>
     )
   }
