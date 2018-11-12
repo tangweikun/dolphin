@@ -1,14 +1,26 @@
 - [x] 点击链接跳转位置问题 https://stackoverflow.com/questions/23581161/how-to-control-the-anchor-landing-position
 - [ ] 支持 Theme 切换
-- [ ] 添加 Github 入口
-- [ ] 添加搜索功能
+- [x] 添加 Github 入口
+- [ ] 添加搜索功能 docsearch.js
 - [ ] 移动端适配
 - [ ] 支持多语言
 - [ ] About Me
+- [ ] font
 - [ ] Use rem instead of px
 - [ ] 友情链接
 - [ ] SVG
+- [ ] prismjs
+- [ ] hover 的时候显示方法语法
+- [ ] router 异步加载
 - [ ] MDN Link
+- [ ] ScrollToTop
 - [ ] polyfill && lodash
+- [ ] markdown
+- [ ] React/Redux/React-Router/Regex/
 - [ ] Syntax
+- [ ] 统计被访问次数
 - [ ] https://www.docz.site/documentation/components-api#docpreview
+- [ ] https://react-guide.github.io/react-router-cn/docs/UPGRADE_GUIDE.html
+- [ ] https://juejin.im/entry/5b50518bf265da0f6436c34a
+- [ ] https://30secondsofinterviews.org/
+- [ ] https://30-seconds.github.io/30-seconds-of-css/

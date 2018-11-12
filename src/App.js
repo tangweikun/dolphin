@@ -89,7 +89,7 @@ const Nav = styled.div`
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: #ce7693;
+  background: rgb(219, 112, 147);
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -97,8 +97,13 @@ const Nav = styled.div`
 
 // TODO: max-width需要修改
 const Content = styled.div`
-  width: 100%;
-  padding-left: 340px;
+  width: 94%;
+  padding-left: 300px;
   padding-top: 56px;
-  max-width: 1024px;
+  margin: 0 auto;
+
+  @media (max-width: 62em) {
+    transform: translateX(0px);
+    padding: 3.88889rem 1.11111rem 1.66667rem;
+  }
 `
