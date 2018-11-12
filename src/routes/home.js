@@ -86,7 +86,13 @@ const StyledH1 = styled.h1`
 `
 
 const Content = styled.div`
-  width: 100%;
-  padding-left: 340px;
+  width: 94%;
+  padding-left: 300px;
   padding-top: 56px;
+  margin: 0 auto;
+
+  @media (max-width: 62em) {
+    transform: translateX(0px);
+    padding: 3.88889rem 1.11111rem 1.66667rem;
+  }
 `

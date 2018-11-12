@@ -1,12 +1,12 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { atomDark } from 'react-syntax-highlighter/dist/styles/prism'
+import { prism } from 'react-syntax-highlighter/dist/styles/prism'
 import styled from 'styled-components'
 
 const MdxComponents = {
   code({ children }) {
     return (
-      <SyntaxHighlighter language="javascript" style={atomDark} showLineNumbers>
+      <SyntaxHighlighter language="javascript" style={prism} showLineNumbers>
         {children}
       </SyntaxHighlighter>
     )
