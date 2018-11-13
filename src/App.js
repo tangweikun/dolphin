@@ -3,6 +3,7 @@ import { MDXProvider } from '@mdx-js/tag'
 import { Provider as RebassProvider } from 'rebass'
 import styled from 'styled-components'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import './fontIcon'
 
 import ArrayMD from './docs/array.md'
 import FunctionMD from './docs/function.md'
@@ -12,6 +13,29 @@ import SidebarMenu from './components/SidebarMenus'
 import { GithubIcon } from './fontIcon'
 import { Home } from './routes/home'
 import ScrollToTop from './ScrollToTop'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faChartBar,
+  faAddressCard,
+  faStar,
+  faCodeBranch,
+  faBoxes,
+  faBox,
+  faClock,
+  faInfoCircle,
+  faAward,
+  faCopy,
+} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faChartBar)
+library.add(faStar)
+library.add(faAddressCard)
+library.add(faCodeBranch)
+library.add(faBoxes)
+library.add(faBox)
+library.add(faClock)
+library.add(faInfoCircle)
+library.add(faCopy)
 
 export default class App extends Component {
   render() {
@@ -104,6 +128,7 @@ const Content = styled.div`
   padding-left: 300px;
   padding-top: 56px;
   margin: 0 auto;
+  /* background: #eeeeee; */
 
   @media (max-width: 62em) {
     transform: translateX(0px);
