@@ -68,6 +68,7 @@ const Sidebar = styled.div`
   font-size: 22px;
   padding: 10px 0 40px 40px;
   overflow: auto;
+  box-shadow: 10px 0 20px -5px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 62em) {
     transform: translateX(-18.6667rem);
