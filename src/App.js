@@ -100,7 +100,7 @@ const Nav = styled.div`
 
 // TODO: max-width需要修改
 const Content = styled.div`
-  width: 94%;
+  width: 86%;
   padding-left: 300px;
   padding-top: 56px;
   margin: 0 auto;

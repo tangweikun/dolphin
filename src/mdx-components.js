@@ -1,12 +1,16 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { prism } from 'react-syntax-highlighter/dist/styles/prism'
+import {
+  prism,
+  okaidia,
+  xonokai,
+} from 'react-syntax-highlighter/dist/styles/prism'
 import styled from 'styled-components'
 
 const MdxComponents = {
   code({ children }) {
     return (
-      <SyntaxHighlighter language="javascript" style={prism}>
+      <SyntaxHighlighter language="javascript" style={okaidia}>
         {children}
       </SyntaxHighlighter>
     )
