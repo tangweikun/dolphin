@@ -46,7 +46,7 @@ export default class App extends Component {
             <RebassProvider>
               <React.Fragment>
                 <Nav>
-                  <NavStyledLink to="/">Polyfill</NavStyledLink>
+                  <NavStyledLink to="/">Dolphin</NavStyledLink>
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <a
                       style={{
@@ -116,7 +116,7 @@ const Nav = styled.div`
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgb(219, 112, 147);
+  background: #202123;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;

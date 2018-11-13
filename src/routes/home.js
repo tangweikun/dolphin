@@ -9,9 +9,7 @@ export class Home extends React.Component {
       <React.Fragment>
         <Content>
           <StyledH1>Dolphin</StyledH1>
-          <p>
-            整理javascript的polyfill，通过了解javascript原生方法的实现方式来更好的理解javascript
-          </p>
+          <StyledP>Polyfill of Javascript native method</StyledP>
 
           <Foo>
             {pages.map(({ sections, pathname }) => (
@@ -34,6 +32,10 @@ export class Home extends React.Component {
     )
   }
 }
+
+const StyledP = styled.p`
+  font-size: 20px;
+`
 
 const StyledH3 = styled.h3`
   margin: 0.5em 0;
