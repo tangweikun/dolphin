@@ -69,7 +69,7 @@ export default class App extends Component {
                   <Route
                     path="/docs/array"
                     component={() => (
-                      <Content>
+                      <Content className="docSearch-content">
                         <ArrayMD />
                       </Content>
                     )}
@@ -77,7 +77,7 @@ export default class App extends Component {
                   <Route
                     path="/docs/function"
                     component={() => (
-                      <Content>
+                      <Content className="docSearch-content">
                         <FunctionMD />
                       </Content>
                     )}
@@ -85,7 +85,7 @@ export default class App extends Component {
                   <Route
                     path="/docs/object"
                     component={() => (
-                      <Content>
+                      <Content className="docSearch-content">
                         <ObjectMD />
                       </Content>
                     )}

@@ -9,18 +9,21 @@
 - [ ] Use rem instead of px
 - [ ] 友情链接
 - [ ] SVG
-- [ ] prismjs
+- [x] prismjs
 - [ ] hover 的时候显示方法语法
 - [ ] router 异步加载
 - [ ] MDN Link
 - [ ] ScrollToTop
 - [ ] polyfill && lodash
-- [ ] markdown
+- [x] markdown
 - [ ] React/Redux/React-Router/Regex/
 - [ ] Syntax
 - [ ] back to top
 - [ ] 统计被访问次数
 - [ ] 新属性用法 Demo
+- [ ] 输入颜色名显示颜色
+- [ ] http://bennettfeely.com/gradients/
+- [ ] https://rgbcolorcode.com/color/1940FF
 - [ ] https://remarkablemark.org/
 - [ ] https://www.docz.site/documentation/components-api#docpreview
 - [ ] https://react-guide.github.io/react-router-cn/docs/UPGRADE_GUIDE.html
