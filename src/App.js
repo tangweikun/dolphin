@@ -26,6 +26,7 @@ import {
   faAward,
   faCopy,
 } from '@fortawesome/free-solid-svg-icons'
+import DocSearch from './components/DocSearch'
 
 library.add(faChartBar)
 library.add(faStar)
@@ -47,7 +48,9 @@ export default class App extends Component {
               <React.Fragment>
                 <Nav>
                   <NavStyledLink to="/">Dolphin</NavStyledLink>
+
                   <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <DocSearch />
                     <a
                       style={{
                         display: 'flex',
