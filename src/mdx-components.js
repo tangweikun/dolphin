@@ -15,6 +15,10 @@ const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
 const CodeWrapper = styled.div`
   position: relative;
   margin-bottom: 30px;
+
+  *::selection {
+    background: deeppink;
+  }
 `
 
 const MdxComponents = {
