@@ -12,6 +12,7 @@ import MdxComponents from './mdx-components'
 import SidebarMenu from './components/SidebarMenus'
 import { GithubIcon } from './fontIcon'
 import { Home } from './routes/home'
+import { Feature } from './routes/feature'
 import ScrollToTop from './ScrollToTop'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -48,7 +49,6 @@ export default class App extends Component {
               <React.Fragment>
                 <Nav>
                   <NavStyledLink to="/">Dolphin</NavStyledLink>
-
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <DocSearch />
                     <a
@@ -68,6 +68,7 @@ export default class App extends Component {
 
                 <Switch>
                   <Route path="/" exact component={Home} />
+                  <Route path="/feature" exact component={Feature} />
                   <Route path="/docs" exact component={Home} />
                   <Route
                     path="/docs/array"
