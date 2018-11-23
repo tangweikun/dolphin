@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { pages } from '../docs.json'
 
-export class Feature extends React.Component {
+export default class Feature extends React.Component {
   render() {
     return (
       <React.Fragment>

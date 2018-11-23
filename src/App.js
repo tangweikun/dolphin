@@ -3,16 +3,15 @@ import { MDXProvider } from '@mdx-js/tag'
 import { Provider as RebassProvider } from 'rebass'
 import styled from 'styled-components'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import Loadable from 'react-loadable'
+
 import './fontIcon'
 
-import ArrayMD from './docs/array.md'
-import FunctionMD from './docs/function.md'
-import ObjectMD from './docs/object.md'
 import MdxComponents from './mdx-components'
 import SidebarMenu from './components/SidebarMenus'
 import { GithubIcon } from './fontIcon'
 import { Home } from './routes/home'
-import { Feature } from './routes/feature'
+
 import ScrollToTop from './ScrollToTop'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -38,6 +37,34 @@ library.add(faBox)
 library.add(faClock)
 library.add(faInfoCircle)
 library.add(faCopy)
+
+const LoadableFeature = Loadable({
+  loader: () => import('./routes/feature'),
+  loading() {
+    return <div>Loading...</div>
+  },
+})
+
+const LoadableArrayMD = Loadable({
+  loader: () => import('./docs/array.md'),
+  loading() {
+    return <div>Loading...</div>
+  },
+})
+
+const LoadableObjectMD = Loadable({
+  loader: () => import('./docs/object.md'),
+  loading() {
+    return <div>Loading...</div>
+  },
+})
+
+const LoadableFunctionMD = Loadable({
+  loader: () => import('./docs/function.md'),
+  loading() {
+    return <div>Loading...</div>
+  },
+})
 
 export default class App extends Component {
   render() {
@@ -68,32 +95,22 @@ export default class App extends Component {
 
                 <Switch>
                   <Route path="/" exact component={Home} />
-                  <Route path="/feature" exact component={Feature} />
+                  <Route path="/feature" exact component={LoadableFeature} />
                   <Route path="/docs" exact component={Home} />
-                  <Route
-                    path="/docs/array"
-                    component={() => (
-                      <Content className="docSearch-content">
-                        <ArrayMD />
-                      </Content>
-                    )}
-                  />
-                  <Route
-                    path="/docs/function"
-                    component={() => (
-                      <Content className="docSearch-content">
-                        <FunctionMD />
-                      </Content>
-                    )}
-                  />
-                  <Route
-                    path="/docs/object"
-                    component={() => (
-                      <Content className="docSearch-content">
-                        <ObjectMD />
-                      </Content>
-                    )}
-                  />
+                  <Content className="docSearch-content">
+                    <Route
+                      path="/docs/array"
+                      component={() => <LoadableArrayMD />}
+                    />
+                    <Route
+                      path="/docs/function"
+                      component={() => <LoadableFunctionMD />}
+                    />
+                    <Route
+                      path="/docs/object"
+                      component={() => <LoadableObjectMD />}
+                    />
+                  </Content>
                 </Switch>
               </React.Fragment>
             </RebassProvider>
